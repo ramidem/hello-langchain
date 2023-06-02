@@ -8,15 +8,17 @@ npm install
 ```
 > _Make sure you are on Node v18.16.0_
 
-Run it, baby!
+Run it!
 ```sh
 npm run dev
+```
 
-# OR this
+Build it!
+```sh
+npm run build
+```
 
-npm run tsc
-
-# Then
-
-node build/index.js
+Ship it!
+```sh
+npm run start
 ```
