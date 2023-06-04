@@ -1,12 +1,17 @@
 import express from "express";
+import { complete } from "./services/generate";
+import Config from "./config/Config";
 
 const app = express();
-const port = process.env.PORT ?? 3000;
+
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send({ message: "hello world" });
 });
 
-app.listen(port, () => {
-  console.log(`[server] Running at http://localhost:${port}`);
+app.post("/complete", complete);
+
+app.listen(Config.port, () => {
+  console.log(`[server] Running at http://localhost:${Config.port}`);
 });
